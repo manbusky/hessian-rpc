@@ -33,6 +33,9 @@ Add `component-scan` config in your `applicationContext.xml` file.
 </context:component-scan>
 ```
 
+> This `component-scan` can auto-proxy your service, 
+> `io.hessian.rpc.server.ScanAnnotationScopeMetadataResolver` is fixed.
+
 Add your Service Java.
 
 ```
