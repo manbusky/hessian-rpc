@@ -53,7 +53,7 @@ import io.hessian.rpc.core.annotation.HServiceMapping;
 import io.hessian.rpc.core.annotation.HServiceNamespace;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@HServiceNamespace("equipmentService")
+@HServiceNamespace
 public class EquipmentServiceImpl implements EquipmentService {
 
     @HServiceMapping
@@ -84,8 +84,12 @@ try {
 
 ```
 
-## Next
 
-Auto proxy with client interface;
+## Next TO DO
 
+- Auto proxy with client Java interface
+- Performance Test
+
+
+## It's Alpha version, just for share, DO NOT USE in your production env
 
