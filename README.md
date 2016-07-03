@@ -6,9 +6,7 @@ It contains three modules,`hessian-rpc-core`、`hessian-rpc-server` and `hessian
 
 ## Quick Start
 
-### Step 1
-
-For server.
+### Step 1 [server]
 
 Add denpendency in your maven `pom.xml` file.
 
@@ -25,6 +23,19 @@ Add denpendency in your maven `pom.xml` file.
 </dependency>
 ```
 
+
+### Step 2 [server]
+
+Import `core/applicationContext-hessian-rpc.xml` into your `applicationContext.xml`
+
+```
+<import resource="classpath://core/applicationContext-hessian-rpc.xml" />
+```
+
+`core/applicationContext-hessian-rpc.xml` is packaged in module `hessian-rpc-server`.
+
+### Step 3 [server]
+
 Add `component-scan` config in your `applicationContext.xml` file.
 
 ```
@@ -35,6 +46,8 @@ Add `component-scan` config in your `applicationContext.xml` file.
 
 > This `component-scan` can auto-proxy your service, 
 > `io.hessian.rpc.server.ScanAnnotationScopeMetadataResolver` is fixed.
+
+### Step 4 [server]
 
 Add your Service Java.
 
@@ -69,7 +82,8 @@ public class EquipmentServiceImpl implements EquipmentService {
 }
 ```
 
-### Step 2
+
+### Step 5 [client]
 
 For client.
 
@@ -94,5 +108,5 @@ try {
 - Performance Test
 
 
-## It's Alpha version, just for share, DO NOT USE in your production env
+## It's alpha version, just for share, DO NOT USE in your production env
 
